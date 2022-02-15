@@ -1,5 +1,6 @@
 class AnimesController < ApplicationController
   before_action :set_anime, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /animes or /animes.json
   def index
@@ -8,6 +9,7 @@ class AnimesController < ApplicationController
 
   # GET /animes/1 or /animes/1.json
   def show
+    
   end
 
   # GET /animes/new
