@@ -22,9 +22,12 @@
         <td><%= anime.category %></td>
         <td><%= anime.year %></td>
         <td><%= anime.rate %></td>
+        
         <td><%= link_to 'Show', anime %></td>
         <td><%= link_to 'Edit', edit_anime_path(anime) %></td>
         <td><%= link_to 'Destroy', anime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        
       </tr>
     <% end %>
   </tbody>
@@ -32,17 +35,23 @@
 
 <br>
 
-<%= link_to 'New Anime', new_anime_path %>
+
 
 
 
 
 <% if user_signed_in? %>
   <%= current_user.email %>
-  <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
+  <ul>
+    <li><%= link_to 'LogOut', destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to 'New Anime', new_anime_path %></li>
+    <li><%= link_to 'Usuários', control_users_index_path %></li>
+  </ul>
+  
 <% else %>
   <%= link_to 'LogIn', new_user_session_path %>
   <%= link_to 'New User/otaku', new_user_registration_path %>
+  
 <% end %>
 
 
