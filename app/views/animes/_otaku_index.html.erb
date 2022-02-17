@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Year</th>
+        <th>Rate</th>
+        <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @animes.each do |anime| %>
+        <tr>
+            <td><%= anime.name %></td>
+            <td><%= anime.author %></td>
+            <td><%= anime.category %></td>
+            <td><%= anime.year %></td>
+            <td><%= anime.rate %></td> 
+
+            <td><%= link_to 'Show', anime %></td>
+                    
+        </tr>
+        <% end %>
+    </tbody>
+</table>
