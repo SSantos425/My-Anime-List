@@ -21,14 +21,19 @@
 
             <td><%= link_to 'Show', anime %></td>
 
-            <% favorite = favorite(anime) %>
+            <% favorite = favorite(anime) %>            
             <% if favorite.nil? %>
                 <td><%= link_to "favorite", anime_favorites_path(anime), method: :post , class:"btn btn-warning"%></td>
             <% else%>
                 <td><%= link_to "unfavorite", anime_favorite_path(favorite.anime, favorite.id), method: :delete , class:"btn btn-warning"%></td>
             <% end %>
                      
-                
+            <% follow_anime = falow_anime(anime) %>
+            <% if follow_anime.nil? %>
+              <td><%= link_to "follow", anime_follow_animes_path(anime), method: :post , class:"btn btn-warning"%></td>
+            <% else %>
+                <td><%= link_to "unfollow", anime_follow_anime_path(follow_anime.anime, follow_anime.id), method: :delete , class:"btn btn-warning"%></td>
+            <% end %>
    
         </tr>
         <% end %>

@@ -8,7 +8,7 @@ class FavoritesController < ApplicationController
         if @favoritable.save
             redirect_to "/"
         else
-            redirect_to coins_path, notice: @favoritable.errors
+            redirect_to animes_path, notice: @favoritable.errors
         end
     end
     
