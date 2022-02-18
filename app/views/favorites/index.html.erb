@@ -1,0 +1,31 @@
+<h1>COLA AI MEN<h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Year</th>
+        <th>Rate</th>
+        <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% current_user.favorites.each do |favorite| %>
+        <tr>
+            <td><%= favorite.anime.name %></td>
+            <td><%= favorite.anime.author %></td>
+            <td><%= favorite.anime.category %></td>
+            <td><%= favorite.anime.year %></td>
+            <td><%= favorite.anime.rate %></td>   
+               
+
+            
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'back', root_path %>

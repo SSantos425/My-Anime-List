@@ -19,6 +19,7 @@
     <li><%= link_to 'LogOut', destroy_user_session_path, method: :delete %></li>
     <li><%= link_to 'New Anime', new_anime_path %></li>
     <li><%= link_to 'Usuários', control_users_index_path %></li>
+    <li><%= link_to 'Favorites', anime_favorites_path(:anime_id)%></li>
   </ul>  
 <% else %>
   <%= link_to 'LogIn', new_user_session_path %>
