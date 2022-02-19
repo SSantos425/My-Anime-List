@@ -13,8 +13,21 @@ class FollowAnimesController < ApplicationController
     end
     
     def destroy
-        @follow_animeable = current_user.follow_animes.find_by(anime_id: params[:anime_id])
-        @follow_animeable.destroy
-        redirect_to "/"
+        
+        @follow_animeable = current_user.follow_animes.find_by(anime_id: params[:anime_id])      
+        
+    
+        @favoritable = current_user.favorites.find_by(anime_id: params[:anime_id])
+        if @favoritable.present?
+            @follow_animeable.destroy
+            @favoritable.destroy
+            redirect_to "/"
+        else
+            @follow_animeable.destroy
+            redirect_to "/"
+        end
+        
+            
+       
     end
 end
