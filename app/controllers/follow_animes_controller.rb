@@ -4,6 +4,7 @@ class FollowAnimesController < ApplicationController
     end
     
     def create
+        
         @follow_animeable = current_user.follow_animes.new(anime_id: params[:anime_id])
         if @follow_animeable.save
             redirect_to "/"

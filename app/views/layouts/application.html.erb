@@ -1,15 +1,35 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <title>MyAnimeList</title>
+        
+    <title>My anime List</title>        
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+     
   </head>
+   
 
-  <body>
-    <%= yield %>
+
+  <body class="sb-nav-fixed">        
+    <div class="container-fluid">
+      
+      <%= render "layouts/header" %>      
+      <div id="layoutSidenav_content">
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+         <%= render "layouts/footer" %>
+      </div>
+    <div>
+     <%= javascript_include_tag 'application'%>
+    <%= yield :javascript %>
   </body>
+  
 </html>

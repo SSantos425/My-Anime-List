@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/follow_animes", to: "follow_animes#index"
+  get "/favorites", to: "favorites#index"
   get 'control_users/index'
   devise_for :users
   root 'animes#index'

@@ -7,6 +7,7 @@ class FavoritesController < ApplicationController
     def create
         @follow_animeable = current_user.follow_animes.new(anime_id: params[:anime_id])
         @favoritable = current_user.favorites.new(anime_id: params[:anime_id])
+
         if (@favoritable.save && @follow_animeable.save)
             redirect_to root_path
         else
@@ -14,6 +15,8 @@ class FavoritesController < ApplicationController
         end
 
 
+       
+    
         
     end
     

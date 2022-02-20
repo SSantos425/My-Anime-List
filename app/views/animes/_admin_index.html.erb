@@ -1,3 +1,4 @@
+<%= link_to 'New Anime', new_anime_path %>
 <table>
   <thead>
     <tr>
@@ -18,6 +19,7 @@
         <td><%= anime.category %></td>
         <td><%= anime.year %></td>
         <td><%= anime.rate %></td>
+        
         
         <td><%= link_to 'Show', anime %></td>
         <td><%= link_to 'Edit', edit_anime_path(anime) %></td>
