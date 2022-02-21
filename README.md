@@ -9,7 +9,8 @@ Things you may want to cover:
 * Description
     Web project that registers animes by the user, being able to favorite or follow them;
 * Status
-    Concluded;
+    In Development;
+```bash
 * Run applications;
     # Clone repository
        $ git clone https://github.com/SSantos425/My-Anime-List.git
@@ -28,7 +29,7 @@ Things you may want to cover:
         x = User.first
         x.role =  1
         x.save
-        
+```
 * technologies
     devise gem 
     pundit gem
@@ -37,5 +38,5 @@ Things you may want to cover:
     Rails 5.2.6.2
 
 * Author
-    https://github.com/SSantos425
+    https://www.linkedin.com/in/samuel-borges-99152420a/
 

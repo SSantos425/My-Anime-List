@@ -23,6 +23,8 @@
                     <td><%= anime.rate %></td> 
 
                     <td><%= link_to icon("far fa-4x", "eye", class:"btn text-info"), anime %></td>
+
+                   
                     <%if current_user.present? %>
                         <% favorite = favorite(anime) %>            
                         <% if favorite.nil? %>
