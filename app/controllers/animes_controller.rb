@@ -5,6 +5,7 @@ class AnimesController < ApplicationController
   # GET /animes or /animes.json
   def index
     @animes = Anime.all
+    @animes = Anime.order(:name).page params[:page] 
   end
 
   # GET /animes/1 or /animes/1.json
@@ -58,6 +59,9 @@ class AnimesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+    
+ 
 
   private
     # Use callbacks to share common setup or constraints between actions.

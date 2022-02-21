@@ -1,15 +1,12 @@
-# README
+# README  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# My Anime List
 
-Things you may want to cover:
-* Project Name
-    My Anime List;
-* Description
-    Web project that registers animes by the user, being able to favorite or follow them;
-* Status
-    In Development;
+## Description
+<p align="center">Web project that registers animes by the user, being able to favorite or follow them</p>
+
+<p align="center"><img src = "http://img.shields.io/static/v1?label=STATUS&message=IN%20INDEVELOPMENT&color=GREEN&style=for-the-badge"/></p>
+
 ```bash
 * Run applications;
     # Clone repository
