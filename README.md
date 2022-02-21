@@ -30,13 +30,16 @@ Things you may want to cover:
         x.role =  1
         x.save
 ```
+
+```bash
 * technologies
     devise gem 
     pundit gem
     font-awesome-sass(v5.15.1) gem
+    SQLite3
     ruby 2.7.4p191
     Rails 5.2.6.2
-
+```
 * Author
     https://www.linkedin.com/in/samuel-borges-99152420a/
 
